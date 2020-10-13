@@ -3,14 +3,14 @@ for i in "$@"
 do
 	for word in  $(tree "$i" --noreport -i)
 	do
-		arr+=" $word";
+		if [[ ! " ${arr[@]} " =~ " ${word} " ]]; then
+    			arr+="$word ";		
+		fi
 	done
 	
-	declare -A b
-	for i in "${arr[@]}"; do b["$i"]=1; done
-
-	for letter in $b
+	for word in $arr
 	do
-		echo $letter;
+		printf "%s" "$word " 
+		tree -F $i | grep -c -w $word
 	done
 done
