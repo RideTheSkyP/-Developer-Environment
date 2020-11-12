@@ -1,0 +1,19 @@
+svn co https://repo.cs.pwr.edu.pl/ind/DevEnv/L2/ EX4
+cd EX4
+mkdir external
+ls
+svn add external/
+svn commit -m "external "
+svn propset svn:externals "info https://repo.cs.pwr.edu.pl/info/" external
+ls external/info/
+
+svn up
+
+svn co https://repo.cs.pwr.edu.pl/ind/DevEnv/external f1
+ls f1
+# empty file
+
+svn up --ignore-externals
+svn co --ignore-externals https://repo.cs.pwr.edu.pl/ind/DevEnv/external f2
+ls f2
+# empty file

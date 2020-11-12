@@ -1,0 +1,4 @@
+cd f1
+svn propset svn:executable on ex1.sh
+./ex1.sh .
+svn propdel svn:executable ex1.sh
