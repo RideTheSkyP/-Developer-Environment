@@ -1,0 +1,11 @@
+svn co https://repo.cs.pwr.edu.pl/ind/DevEnv/L2/asd/ empty --depth empty
+tree empty
+
+svn co https://repo.cs.pwr.edu.pl/ind/DevEnv/L2/asd/ files --depth files
+tree files
+
+svn co https://repo.cs.pwr.edu.pl/ind/DevEnv/L2/asd/ immediates --depth immediates
+tree immediates
+
+svn co https://repo.cs.pwr.edu.pl/ind/DevEnv/L2/asd/ infinity --depth infinity
+tree infinity
