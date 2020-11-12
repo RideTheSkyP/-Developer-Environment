@@ -1,0 +1,19 @@
+svn co https://repo.cs.pwr.edu.pl/ind/DevEnv/L1/ f1
+svn co https://repo.cs.pwr.edu.pl/ind/DevEnv/L1/ f2
+
+cd f1
+cat ex1.sh
+gedit ex1.sh
+cat ex1.sh
+svn commit -m "change 2"
+cd ..
+
+cd f2
+gedit ex1.sh
+svn up
+ls
+svn resolve --accept mine-full ex1.sh
+svn up
+cat ex1.sh
+
+svn log -v
