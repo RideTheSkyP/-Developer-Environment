@@ -1,0 +1,6 @@
+cd f1
+ssh-keygen
+	/home/push/ind
+cp ~/ind.pub ~/Desktop/DevEnv/f1
+git add --force .
+git commit -m "111"

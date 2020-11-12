@@ -10,25 +10,25 @@ svn info a.txt
 svn status a.txt
 cd ..
 
-cd workcopy2
+cd f2
 
 svn up
-svn info https://repo.cs.pwr.edu.pl/251536/SP/lista2/a.txt
+svn info https://repo.cs.pwr.edu.pl/ind/DevEnv/L2/a.txt
 
 svn lock a.txt -m "lock a.txt"
 
 svn unlock a.txt
 
 svn unlock --force a.txt
-svn info https://repo.cs.pwr.edu.pl/251536/SP/lista2/a.txt
+svn info https://repo.cs.pwr.edu.pl/ind/DevEnv/L2/a.txt
 
 svn lock a.txt -m "lock a.txt"
 
 cd ..
-cd workcopy1
+cd f1
 
 svn up
-svn info https://repo.cs.pwr.edu.pl/251536/SP/lista2/a.txt
+svn info https://repo.cs.pwr.edu.pl/ind/DevEnv/L2/a.txt
 
 svn lock a.txt -m "lock a.txt"
 

@@ -1,0 +1,30 @@
+svn co https://repo.cs.pwr.edu.pl/ind/DevEnv/ EX6
+ls
+cd EX6/
+gedit a.txt
+gedit b.txt
+cat a.txt
+cat b.txt
+svn add a.txt b.txt
+svn commit -m "ab"
+svn delete b.txt
+svn commit -m "-b"
+gedit a.txt
+cat a.txt
+svn move a.txt b.txt
+svn commit -m "mv ab"
+gedit b.txt
+cat b.txt 
+svn move b.txt c.txt
+svn commit -m "mv b c"
+ls
+gedit b.txt
+cat b.txt
+svn add b.txt
+svn commit -m "add b.txt"
+svn log -v
+svn log -v c.txt
+svn log -v b.txt
+svn info
+svn diff -r 61:65 c.txt@61
+
