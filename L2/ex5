@@ -1,0 +1,37 @@
+svn co https://repo.cs.pwr.edu.pl/ind/DevEnv/L2/ f1
+svn co https://repo.cs.pwr.edu.pl/ind/DevEnv/L2/ f2
+
+cd f1
+svn add a.txt 
+svn commit -m "add a.txt"
+
+svn lock a.txt -m "lock a.txt"
+svn info a.txt
+svn status a.txt
+cd ..
+
+cd workcopy2
+
+svn up
+svn info https://repo.cs.pwr.edu.pl/251536/SP/lista2/a.txt
+
+svn lock a.txt -m "lock a.txt"
+
+svn unlock a.txt
+
+svn unlock --force a.txt
+svn info https://repo.cs.pwr.edu.pl/251536/SP/lista2/a.txt
+
+svn lock a.txt -m "lock a.txt"
+
+cd ..
+cd workcopy1
+
+svn up
+svn info https://repo.cs.pwr.edu.pl/251536/SP/lista2/a.txt
+
+svn lock a.txt -m "lock a.txt"
+
+svn lock --force a.txt -m "lock a.txt"
+
+svn unlock a.txt
