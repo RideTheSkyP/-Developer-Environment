@@ -1,0 +1,32 @@
+SVN:
+
+svn co https://repo.cs.pwr.edu.pl/p_00/ L3
+cd L3
+svn cp https://repo.cs.pwr.edu.pl/p_00/app_1/trunk \
+           https://repo.cs.pwr.edu.pl/p_00/app_1/branches/ind \
+           -m "Creating a branch of trunk."
+svn up
+cd app_1/branches/ind
+gedit sind_podprogram.c
+gedit program.h
+gedit main.c
+gedit makefile
+make
+./program ind
+make clean
+ls
+svn add sind_podprogram.c
+svn commit -m "Added program"
+svn up
+cd app_1/trunk
+svn merge https://repo.cs.pwr.edu.pl/p_00/app_1/branches/ind
+svn commit -m "Merging branch into trunk"
+make
+ls
+./program ind
+make clean
+svn up
+svn cp https://repo.cs.pwr.edu.pl/p_00/app_1/trunk \
+           https://repo.cs.pwr.edu.pl/p_00/app_1/tags/v_ind \
+           -m "Creating a tag of trunk."
+
