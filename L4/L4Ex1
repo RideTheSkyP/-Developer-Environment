@@ -1,0 +1,26 @@
+cd ~
+git clone git@156.17.7.16:sandbox-20-21_00
+cd sandbox-20-21_00
+ls
+git checkout -b sindv1
+git branch
+gedit sind_podprogram.c
+cat
+gedit program.h
+cat
+gedit main.c
+cat
+gedit makefile
+cat
+make
+git add .
+git status
+git commit -a -m "test"
+git branch --set-upstream-to=origin/sind
+
+
+git checkout master
+git pull
+git checkout sind
+git merge master
+git tag -a sind
